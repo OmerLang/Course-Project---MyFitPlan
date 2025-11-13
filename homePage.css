@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+}
+html,
+body {
+  height: 100%;
+}
+.main {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.homeDescription {
+  font-weight: 200;
+  padding-top: 10vh;
+}
+.descriptionList {
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.descriptionList ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 2%;
+  font-weight: 200;
+}
+.sidebar {
+  width: 100%;
+  height: 75px;
+  background-color: #111414;
+  position: fixed;
+  top: 0;
+}
+.sidebar .inner {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: clamp(200, 900, 900);
+  padding-left: 29vw;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.sidebar .inner a {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .inner .topButton {
+  margin-right: clamp(50px, 20vw, 20vw);
+}
+
+.introSection {
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.9) 10%,
+      rgba(0, 0, 0, 0.6) 30%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.82) 60%,
+      rgba(0, 0, 0, 0.5) 80%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(images/homepageBackground/gym.jpg);
+  font-family: "Anton", sans-serif;
+  background-position: center 20%;
+  background-size: cover;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  box-sizing: border-box;
+  height: 100vh;
+}
+.align {
+  max-width: 1200px;
+  padding-left: clamp(40px, 29vw, 1000px);
+  margin-right: 0;
+  font-family: "Anton", sans-serif;
+}
+.main .align {
+  padding-top: 8%;
+}
+
+.introSection .startButton {
+  margin-top: 2%;
+  color: rgb(53, 43, 43);
+  font-size: 19px;
+  font-weight: 900;
+  font-family: "Anton", sans-serif;
+  background-color: aquamarine;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: transform 0.3s;
+  border-radius: 50px;
+}
+
+.introSection .startButton:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.main .finalText {
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 25px;
+}
+
+.introSection .align h1 {
+  font-size: 38px;
+  padding-top: 200px;
+}
+.sidebar .inner .buttonGroup {
+  gap: 3vw;
+  display: flex;
+  margin-left: auto;
+  flex: 1 1 auto;
+  white-space: nowrap;
+}
+.buttonGroup .button {
+  font-family: "Anton", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 19px;
+}
+.buttonGroup .getPlanNowButton {
+  font-family: "Anton", sans-serif;
+  text-decoration: none;
+  background-color: aquamarine;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: black;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.buttonGroup .topButton {
+  font-family: "Anton", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+}
