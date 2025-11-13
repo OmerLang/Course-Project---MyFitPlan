@@ -108,7 +108,7 @@ body {
 
 .introSection .startButton {
   margin-top: 2%;
-  color: rgb(53, 43, 43);
+  color: black;
   font-size: 19px;
   font-weight: 900;
   font-family: "Anton", sans-serif;
@@ -146,18 +146,18 @@ body {
   text-decoration: none;
   color: white;
   font-weight: 600;
-  font-size: 19px;
+  font-size: 17px;
 }
 .buttonGroup .getPlanNowButton {
   font-family: "Anton", sans-serif;
   text-decoration: none;
   background-color: aquamarine;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 8px 15px;
   border-radius: 15px;
   color: black;
   font-weight: 600;
-  font-size: 19px;
+  font-size: 17px;
 }
 
 .buttonGroup .topButton {
