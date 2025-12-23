@@ -137,7 +137,6 @@ li::before {
   align-items: center;
   padding-block: calc(var(--space-lg)*2);
   gap: 50px;
-  /* background-color: var(--bgc); */
   background-image: url("./images/homepageBackground/active.jpg");
   background-size: cover;
   background-repeat: no-repeat;
