@@ -283,6 +283,8 @@ p {
   border-radius: 50px;
   background-color: rgb(232, 255, 253);
   transition: scale 0.2s ease-out;
+  text-decoration: none;
+  color: inherit;
 }
 
 .hero-get-plan:hover {
