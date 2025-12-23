@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFitPlan - Sign Up</title>
+    <link rel="stylesheet" href="Login Page style.css">
+</head>
+<body>
+
+    <div class="overlay">
+        
+        <div class="navbar-container-grid">
+            <nav class="navbar">
+                <a href="#" class="home-button-logo">MyFitPlan</a>
+                <div class="navbar-buttons-container">
+                    <a href="#" class="button">Home</a>
+                    <a href="#" class="button">About</a>
+                    <a href="#" class="button">Contact</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="card" style="width: 400px; margin-top: 20px; margin-bottom: 20px;">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join MyFitPlan today</p>
+
+            <form id="signupForm" novalidate>
+                
+                <div class="input-group">
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                    <small class="error-msg"></small>
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="input-group">
+                    <input type="tel" id="phone" placeholder="Phone (05X-XXXXXXX)" required>
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="input-row">
+                    <div style="width: 48%;">
+                        <input type="number" id="age" placeholder="Age" min="14" max="120" required>
+                        <small class="error-msg"></small>
+                    </div>
+                    
+                    <select id="gender" required style="width: 48%;">
+                        <option value="" disabled selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <select id="country" required>
+                        <option value="" disabled selected>Select Country</option>
+                        <option value="Israel">Israel</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <select id="fitnessGoal" required>
+                        <option value="" disabled selected>Fitness Goal</option>
+                        <option value="weight_loss">Weight Loss</option>
+                        <option value="muscle_gain">Muscle Gain</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="cardio">Improve Cardio</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    <small class="error-msg"></small>
+                </div>
+                
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+
+            <p class="switch-page">
+                Already have an account? <a href="Login Page index.html">Log In</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="Login page Script.js"></script>
+</body>
+</html>

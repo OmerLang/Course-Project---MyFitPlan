@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFitPlan - Login</title>
+    <link rel="stylesheet" href="Login Page style.css">
+</head>
+<body>
+
+    <div class="overlay">
+        
+        <div class="navbar-container-grid">
+            <nav class="navbar">
+                <a href="#" class="home-button-logo">MyFitPlan</a>
+                <div class="navbar-buttons-container">
+                    <a href="#" class="button">Home</a>
+                    <a href="#" class="button">About</a>
+                    <a href="#" class="button">Contact</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="card">
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Enter your details to sign in</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="loginEmail" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                </div>
+                
+                <button type="submit" class="btn">Log In</button>
+            </form>
+
+            <div style="margin-top: 15px;">
+                <a href="#" id="forgotPasswordLink" style="font-size: 14px; color: #e74c3c; text-decoration: none;">Forgot Password?</a>
+            </div>
+
+            <p class="switch-page">
+                Don't have an account? <a href="SignUp Page.html">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="Login page Script.js"></script>
+</body>
+</html>
