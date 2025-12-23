@@ -1,40 +1,61 @@
+/* ===== Global CSS Reset ===== */
+/* Remove default margin/padding and use border-box sizing everywhere */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== Design Tokens / CSS Variables ===== */
+/* Central place for layout, spacing, font sizes, and colors */
 :root {
+  /* Navigation height */
   --nav-h: 56px;
+
+  /* Grid layout columns and rows (mobile-first) */
   --cols: 20px 1fr 20px;
   --rows: var(--nav-h) repeat(3, auto);
+
+  /* Base text color */
   --text-color: rgb(0, 0, 0);
+
+  /* Spacing scale */
   --space-xs: clamp(8px, 1vw, 12px);
   --space-sm: clamp(12px, 2vw, 20px);
   --space-md: clamp(20px, 4vw, 40px);
   --space-lg: clamp(32px, 6vw, 64px);
+
+  /* Font sizes */
   --fs-body: clamp(16px, 2.2vw, 25px);
   --fs-ul: clamp(16px, 2.2vw, 25px);
   --fs-h1: clamp(38px, 5vw, 55px);
   --fs-h3: clamp(34px, 4vw, 45px);
   --fs-rev: clamp(14px, 2vw, 18px);
+
+  /* Gaps for layout/carousel */
   --gap-xs: clamp(12px, 1.2vw, 18px);
   --gap-sm: clamp(18px, 2vw, 28px);
   --gap-md: clamp(24px, 3vw, 40px);
   --gap-lg: clamp(50px, 20vw, 400px);
+
+  /* Default background color */
   --bgc: rgb(243, 254, 255);
 }
 
+/* ===== Base HTML / Body Styling ===== */
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
   color: var(--text-color);
 }
 
+/* ===== Lists Styling ===== */
+/* Custom bullet list using pseudo-element */
 ul {
   list-style: none;
   padding-left: 0;
@@ -42,7 +63,7 @@ ul {
   flex-direction: column;
   gap: var(--space-xs);
   font-size: var(--fs-ul);
-    line-height: 1.6;
+  line-height: 1.6;
   font-weight: 600;
 }
 
@@ -57,44 +78,53 @@ li::before {
   left: 0;
 }
 
+/* ===== Main Grid Layout ===== */
+/* Page-level grid structure */
 .grid-layout {
   min-height: 100vh;
   display: grid;
   grid-template-columns: var(--cols);
   grid-template-rows: var(--rows);
-  row-gap: var(--space-sm)
+  row-gap: var(--space-sm);
 }
 
+/* Utility class to span full grid width */
 .content {
   grid-column: 1 / -1;
 }
 
+/* ===== Navigation Bar ===== */
+/* Sticky navbar with blur effect */
 .navbar-container-grid {
-    display: grid;
-    grid-template-columns: var(--cols);
-    grid-template-rows: var(--nav-h);
-    position: sticky;
-    top: 0;
-    grid-column: 1 / -1;
-    background: rgba(237, 243, 249, 0.5);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
+  display: grid;
+  grid-template-columns: var(--cols);
+  grid-template-rows: var(--nav-h);
+  position: sticky;
+  top: 0;
+  grid-column: 1 / -1;
+  background: rgba(237, 243, 249, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
 
+/* ===== Desktop Layout Overrides ===== */
 @media (min-width: 900px) {
   :root {
-    --cols: minmax(100px, 1fr) minmax(0, 1300px) minmax(100px,  1fr);
+    /* Centered content with max width */
+    --cols: minmax(100px, 1fr) minmax(0, 1300px) minmax(100px, 1fr);
     --rows: var(--nav-h) repeat(2, 1fr) auto;
   }
 }
 
+/* Navbar inner content */
 .navbar {
   display: flex;
   align-items: center;
   grid-column: 2;
 }
 
+/* Logo / home link */
 .home-button-logo {
   margin-right: auto;
   font-size: 20px;
@@ -103,12 +133,14 @@ li::before {
   color: inherit;
 }
 
+/* Container for navbar buttons */
 .navbar-buttons-container {
   display: flex;
   gap: var(--space-lg);
   flex-wrap: nowrap;
 }
 
+/* Shared button styles */
 .button {
   font-size: 18px;
   font-weight: 600;
@@ -116,26 +148,29 @@ li::before {
   color: inherit;
 }
 
+/* ===== Hero Sections ===== */
 
+/* Hero section 1 with centered background image */
 .hero1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-block: calc(var(--space-lg)*2);
+  padding-block: calc(var(--space-lg) * 2);
   gap: 50px;
   background-image: url("./images/homepageBackground/gym2.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
+/* Hero section 2 with overlay */
 .hero2 {
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-block: calc(var(--space-lg)*2);
+  padding-block: calc(var(--space-lg) * 2);
   gap: 50px;
   background-image: url("./images/homepageBackground/active.jpg");
   background-size: cover;
@@ -143,6 +178,7 @@ li::before {
   background-position: 50% 80%;
 }
 
+/* White overlay on hero2 */
 .hero2::before {
   content: "";
   position: absolute;
@@ -150,11 +186,13 @@ li::before {
   background: rgba(255, 255, 255, 0.8);
 }
 
+/* Keep hero2 content above overlay */
 .hero2 > * {
   position: relative;
   z-index: 1;
 }
 
+/* ===== Reviews / Carousel Section ===== */
 .hero3 {
   display: flex;
   align-items: center;
@@ -165,13 +203,15 @@ li::before {
   overflow: hidden;
 }
 
-.carousel-viewport{
+/* Visible viewport for carousel */
+.carousel-viewport {
   overflow: hidden;
   width: 100%;
   display: flex;
   align-items: center;
 }
 
+/* Auto-scrolling carousel container */
 .carousel-container {
   display: flex;
   align-items: center;
@@ -182,15 +222,18 @@ li::before {
   min-height: clamp(220px, 35vh, 420px);
 }
 
+/* Pause animation on hover */
 .carousel-container:hover {
   animation-play-state: paused;
 }
 
+/* Carousel scrolling animation */
 @keyframes reviewScroll {
-    from { transform: translateX(0); }
+  from { transform: translateX(0); }
   to   { transform: translateX(-50.7%); }
 }
 
+/* Individual review card */
 .slide {
   width: clamp(150px, 55vw, 400px);
   height: clamp(150px, 22vh, 240px);
@@ -206,6 +249,7 @@ li::before {
   line-height: 1.7;
 }
 
+/* ===== Typography & Buttons ===== */
 
 a:hover {
   cursor: pointer;
@@ -228,6 +272,7 @@ p {
   font-weight: 600;
 }
 
+/* Call-to-action button */
 .hero-get-plan {
   font-size: var(--fs-body);
   text-align: center;
@@ -244,6 +289,7 @@ p {
   scale: 1.02;
 }
 
+/* Review text styles */
 .review-text {
   font-size: clamp(16px, 2.6vw, 20px);
   line-height: 1.6;
