@@ -158,20 +158,19 @@ li::before {
 
 .hero3 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-background-color: rgb(236, 242, 248);
-
+  align-items: center;
+  background-color: rgb(236, 242, 248);
   position: relative;
   height: clamp(200px, 25vh, 400px);
   margin-bottom: var(--space-sm);
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .carousel-viewport{
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .carousel-container {
@@ -181,6 +180,7 @@ background-color: rgb(236, 242, 248);
   width: max-content;
   will-change: transform;
   animation: reviewScroll 180s linear infinite;
+  min-height: clamp(220px, 35vh, 420px);
 }
 
 .carousel-container:hover {
@@ -194,7 +194,7 @@ background-color: rgb(236, 242, 248);
 
 .slide {
   width: clamp(150px, 55vw, 400px);
-  height: clamp(100px, 28vh, 240px);
+  height: clamp(150px, 22vh, 240px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -205,9 +205,6 @@ background-color: rgb(236, 242, 248);
   padding: clamp(3px, 3vw, 24px);
   box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.08);
   line-height: 1.7;
-  margin-top: 20px;
-  margin-bottom: 20px;
-
 }
 
 
