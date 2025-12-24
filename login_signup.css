@@ -35,6 +35,7 @@ body {
     display: flex;
     flex-direction: column; 
     align-items: center;
+    gap: 100px;
 }
 
 .card {
@@ -86,14 +87,16 @@ body {
     font-weight: 700;
     text-decoration: none;
     color: #f0f0f0;
-    padding-left: 20px;
+    margin-right: auto;
+    padding-left: 10px;
 }
 
 .navbar-buttons-container {
     display: flex;
-    gap: var(--space-lg);
+    gap: clamp(32px, 8vw, 80px);
     flex-wrap: nowrap;
-    padding-right: 20px;
+    padding-right: 10px;
+
 }
 
 .button {
