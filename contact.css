@@ -1,0 +1,191 @@
+/* =========================================
+   1. Global & Variables
+   ========================================= */
+:root {
+    --cols: 1fr minmax(auto, 1200px) 1fr;
+    --nav-h: 80px;
+    --space-lg: 30px;
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --text-dark: #333;
+    --bg-light: #f4f7f6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* =========================================
+   2. Navbar Styles (From your request)
+   ========================================= */
+.navbar-container-grid {
+    display: grid;
+    grid-template-columns: var(--cols);
+    grid-template-rows: var(--nav-h);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95); /* Slightly more opaque for readability */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    height: 56px;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    grid-column: 2;
+    width: 100%;
+    height: 56px;
+
+}
+
+.home-button-logo {
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    letter-spacing: -0.5px;
+}
+
+.navbar-buttons-container {
+    display: flex;
+    gap: clamp(32px, 6vw, 64px);
+    align-items: center;
+}
+
+.button {
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+
+
+
+/* =========================================
+   3. Contact Page Layout
+   ========================================= */
+.contact-section {
+    display: grid;
+    grid-template-columns: var(--cols);
+    padding: 80px 0;
+    min-height: calc(100vh - var(--nav-h));
+    align-items: center;
+}
+
+.contact-wrapper {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Left Side Text */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    padding-top: 20px;
+}
+
+.contact-info h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 450px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.info-item i {
+    color: var(--accent-color);
+}
+
+/* Right Side Form Card */
+.contact-form-card {
+    flex: 1;
+    min-width: 320px;
+    max-width: 500px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    box-sizing: border-box; /* Important for padding */
+    transition: border-color 0.3s;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background-color: #fff;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}

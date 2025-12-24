@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Physical Details - MyFitPlan</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+
+    <div class="overlay">
+        
+        <div class="navbar-container-grid">
+            <div class="content navbar">
+                <a class="home-button-logo" href="index.html">MyFitPlan</a>
+                <div class="navbar-buttons-container">
+                    <a class="button" href="login.html">Login</a>
+                    <a class="button" href="signup.html">Sign-Up</a>
+                    <a class="button" href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Let's Know You Better</h2>
+            <div class="subtitle">Help us build your perfect plan</div>
+
+            <form action="#">
+                <div class="input-row">
+                    <div style="width: 48%;">
+                        <label for="age" style="font-size:12px; color:#666;">Age</label>
+                        <input type="number" id="age" placeholder="Ex: 25">
+                    </div>
+                    <div style="width: 48%;">
+                        <label for="gender" style="font-size:12px; color:#666;">Gender</label>
+                        <select id="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <input type="number" placeholder="Height (cm)">
+                </div>
+                <div class="input-group">
+                    <input type="number" placeholder="Weight (kg)">
+                </div>
+
+                <div class="input-group">
+                    <label for="goal" style="font-size:12px; color:#666; display:block; margin-bottom:5px;">Primary Goal</label>
+                    <select id="goal">
+                        <option value="lose_weight">Lose Weight</option>
+                        <option value="build_muscle">Build Muscle</option>
+                        <option value="endurance">Improve Endurance</option>
+                        <option value="flexibility">Flexibility & Yoga</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Create My Plan</button>
+            </form>
+
+            <div class="switch-page">
+                <a class="switch-page" href="index.html">Skip for now</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

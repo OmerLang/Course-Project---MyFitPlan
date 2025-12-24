@@ -1,0 +1,130 @@
+/* =========================================
+   1. Navbar Variables
+   ========================================= */
+:root {
+    --cols: 1fr minmax(auto, 1200px) 1fr;
+    --nav-h: 80px;
+    --space-lg: 30px;
+    --primary-color: #2c3e50;
+}
+
+/* =========================================
+   2. Basic Page Setup
+   ========================================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Background image */
+    background-image: url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1975&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* =========================================
+   3. Overlay (Navbar + Card Layout)
+   ========================================= */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 50px; /* Adjusted gap slightly */
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    width: 350px;
+    text-align: center;
+    
+    margin: auto; 
+    margin-top: 50px; /* Push down a bit */
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================
+   4. Navbar Styles
+   ========================================= */
+.navbar-container-grid {
+    display: grid;
+    grid-template-columns: var(--cols);
+    grid-template-rows: 56px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    
+    background: rgba(237, 243, 249, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    grid-column: 2;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+}
+
+.home-button-logo {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: auto;
+}
+
+.navbar-buttons-container {
+    display: flex;
+    gap: clamp(32px, 6vw, 64px);
+}
+
+.button {
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: color 0.3s;
+}
+
+/* =========================================
+   5. Form Styles
+   ========================================= */
+h2 { color: #333; margin-bottom: 5px; margin-top: 0; }
+.subtitle { color: #666; margin-bottom: 20px; font-size: 0.9rem; }
+
+.input-group { margin-bottom: 12px; text-align: left; position: relative; }
+.input-row { display: flex; justify-content: space-between; margin-bottom: 12px; text-align: left; }
+
+input, select { 
+    width: 100%; padding: 12px; border: 1px solid #ddd; 
+    border-radius: 6px; box-sizing: border-box; font-size: 14px; 
+    background-color: #fff; 
+}
+
+.btn { 
+    width: 100%; padding: 12px; background-color: #2c3e50; 
+    color: white; border: none; border-radius: 6px; 
+    font-size: 16px; font-weight: bold; cursor: pointer; 
+    margin-top: 10px; transition: background 0.3s;
+}
+
+.switch-page {
+    text-decoration: none;
+    color: inherit;
+    padding-top: 10px;
+}
