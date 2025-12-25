@@ -159,7 +159,7 @@ li::before {
   align-items: center;
   padding-block: calc(var(--space-lg) * 2);
   gap: 50px;
-  background-image: url("./images/homepageBackground/gym2.jpg");
+  background-image: url("../assets/images/homepageBackground/gym2.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -173,7 +173,7 @@ li::before {
   align-items: center;
   padding-block: calc(var(--space-lg) * 2);
   gap: 50px;
-  background-image: url("./images/homepageBackground/active.jpg");
+  background-image: url("../assets/images/homepageBackground/active.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 80%;
