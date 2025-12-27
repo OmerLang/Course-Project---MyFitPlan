@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Save to LocalStorage
             localStorage.setItem(email, JSON.stringify(user));
             alert("Registration successful! You can now log in.");
-            window.location.href = "Login Page index.html";
+            window.location.href = "./login.html";
         });
     }
 
@@ -220,7 +220,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const email = document.getElementById('loginEmail').value;
             const password = document.getElementById('loginPassword').value;
-            
             // Get user from storage
             const storedUser = localStorage.getItem(email);
 
@@ -228,6 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const userData = JSON.parse(storedUser);
                 if (userData.password === password) {
                     alert(`Welcome back, ${userData.name}!`);
+                    window.location.href = "./details.html";
                     // Redirect logic here if needed
                 } else {
                     alert("Error: Incorrect password.");

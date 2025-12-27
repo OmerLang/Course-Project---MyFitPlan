@@ -86,11 +86,13 @@ body {
     text-decoration: none;
     color: #ffffff;
     margin-right: auto;
+    padding-left: 10px;
 }
 
 .navbar-buttons-container {
     display: flex;
     gap: clamp(32px, 6vw, 64px);
+    padding-right: 10px;
 }
 
 .button {
