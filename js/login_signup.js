@@ -226,9 +226,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (storedUser) {
                 const userData = JSON.parse(storedUser);
                 if (userData.password === password) {
+                    localStorage.setItem("currentUser", JSON.stringify(userData));
                     alert(`Welcome back, ${userData.name}!`);
-                    window.location.href = "./details.html";
-                    // Redirect logic here if needed
+                    if (userData.details) {
+                        window.location.href = "../index.html";
+                    }
+                    else {
+                        window.location.href = "./details.html";
+                    }
                 } else {
                     alert("Error: Incorrect password.");
                 }

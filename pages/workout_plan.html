@@ -17,8 +17,7 @@
       <div class="content navbar">
         <a class="home-button-logo" href="../index.html">MyFitPlan</a>
         <div class="navbar-buttons-container">
-          <a class="button" href="./login.html">Login</a>
-          <a class="button" href="./signup.html">Sign-Up</a>
+          <a class="button js-logout" href="../index.html">Logout</a>
           <a class="button" href="./contact.html">Contact Us</a>
         </div>
       </div>
@@ -26,7 +25,11 @@
 
     <!-- Workout Plan Card -->
     <div class="card">
-      <h2>Your Workout Plan</h2>
+      <h2 class="plan-title">Your Workout Plan</h2>
+      <div class="disclaimer">
+        <strong>Note:</strong> This is a static example workout plan.
+        In future versions, each user will receive a personalized plan based on their details.
+      </div>
 
 
       <h3>Weekly Schedule</h3>
@@ -54,6 +57,8 @@
     </div>
 
   </div>
+      <script src="../js/logout.js"></script>
+      <script src="../js/workout_plan.js"></script>
 
 </body>
 </html>
