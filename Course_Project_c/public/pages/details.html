@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyFitPlan - My Physical Details</title>
+  <link rel="stylesheet" href="/assets/css/details.css">
+</head>
+<body>
+
+  <div class="overlay">
+
+    <!-- Navbar -->
+    <div class="navbar-container-grid">
+      <div class="navbar">
+        <a class="home-button-logo" href="/">MyFitPlan</a>
+        <div class="navbar-buttons-container">
+          <a class="button js-plan" href="/pages/workout_plan.html">My Plan</a>
+          <a class="button" href="/pages/contact.html">Contact Us</a>
+          <button class="button js-logout">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- Card -->
+    <div class="card">
+      <h2 class = "js-user-name"></h2>
+      <div class="subtitle">Help us build your perfect plan</div>
+
+      <form id ="detailsForm">
+
+        <div class="input-group">
+          <input
+            type="number"
+            id="height"
+            name="height"
+            placeholder="Height (cm)"
+            required
+            min="120"
+            max="230"
+          >
+        </div>
+
+        <div class="input-group">
+          <input
+            type="number"
+            id="weight"
+            name="weight"
+            placeholder="Weight (kg)"
+            required
+            min="35"
+            max="250"
+            step="0.1"
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="goal">Primary Goal</label>
+          <select
+            id="goal"
+            name="goal"
+            required
+          >
+            <option value="" disabled selected>Select goal</option>
+            <option value="weight_loss">Lose Weight</option>
+            <option value="muscle_gain">Build Muscle</option>
+            <option value="endurance">Improve Endurance</option>
+            <option value="cardio">Improve Cardio</option>
+          </select>
+        </div>
+        
+        <div class="input-group">
+          <label for="experience">Experience</label>
+          <select
+            id="experience"
+            name="experience"
+            required
+            >
+            <option value="" disabled selected>Select experience</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn">Create My Plan</button>
+      </form>
+
+      <div class="switch-page">
+        <a class="skip-button" href="/">Skip for now</a>
+      </div>
+    </div>
+
+  </div>
+      <script src="/assets/js/logout.js"></script>
+      <script src="/assets/js/details.js"></script>
+
+</body>
+</html>

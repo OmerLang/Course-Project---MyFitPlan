@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyFitPlan - Login</title>
+    <link rel="stylesheet" href="../assets/css/login_signup.css" />
+<link rel="icon" type="image/jpg" href="/assets/logo/head/logo.jpg" />
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="navbar-container-grid">
+        <nav class="navbar">
+          <a class="home-button-logo" href="/" >MyFitPlan</a>
+          <div class="navbar-buttons-container">
+            <a class="button" href="/pages/contact.html" >Contact Us</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="card">
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Enter your details to sign in</p>
+
+        <form id="loginForm">
+          <div class="input-group">
+            <input
+              type="email"
+              name="email"
+              id="loginEmail"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              name="password"
+              id="loginPassword"
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn">Log In</button>
+        </form>
+
+        <div style="margin-top: 15px">
+          <a
+            href='/pages/resetPassword.html'
+            id="forgotPasswordLink"
+            class="forgot-password-link"
+            >Forgot Password?</a
+          >
+        </div>
+
+        <p class="switch-page">
+          Don't have an account? <a href="/pages/signup.html">Sign Up</a>
+        </p>
+      </div>
+    </div>
+
+<script src="/assets/js/login.js"></script>
+  </body>
+</html>
